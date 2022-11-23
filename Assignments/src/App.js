@@ -10,10 +10,15 @@ import ReactDOM from "react-dom/client";
 //     React.createElement("h3", { id: "heading3" }, "In three months"),
 //   ]
 // );
+const HeaderComponent1 = () => {
+    return (
+        <h1 id="heading1"> Namaste Javascript Bootcamp! </h1>
+    );
+};
 const HeadComponent = () => {
   return (
     <div className="title">
-      <h1 id="heading1"> Namaste Javascript Bootcamp! </h1>
+      <HeaderComponent1></HeaderComponent1>
       <h2 id="heading2"> From zero to hero </h2>
       <h3 id="heading3"> In three months </h3>
     </div>
