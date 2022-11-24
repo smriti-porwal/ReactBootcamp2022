@@ -1,9 +1,31 @@
-.heading{
-    color:aqua;
-    border-bottom: 1px solid aqua;
-    width: fit-content;
+.heading {
+  color: aqua;
+  border-bottom: 1px solid aqua;
+  width: fit-content;
 }
-.title{
-    color: rgb(52, 188, 111);
+.title {
+  color: rgb(52, 188, 111);
+}
+* {
+  box-sizing: border-box;
+}
+.nav {
+  display: flex;
+  background-color: #e9e9e9;
+}
+#user {
+  padding: 14px 16px;
+  margin-top: 8px;
+}
+#logo{
+    padding: 14px 16px;
+    margin-top: 8px;
+}
+#searchBar{
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 16px;
+}
 
-}
+
