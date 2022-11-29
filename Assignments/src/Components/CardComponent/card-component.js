@@ -1,7 +1,7 @@
 import './card-component.css';
 
-const CardComponent = (props) => {
-    let {photo, name, place, company, designation} = props.data;
+const CardComponent = ({data}) => {
+    const {photo, name, place, company, designation} = data;
     return (
         <div className="card">
             <img src={photo} className="userimage" alt="UserName"></img>
