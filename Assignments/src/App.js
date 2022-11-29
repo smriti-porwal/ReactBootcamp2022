@@ -1,7 +1,9 @@
 // import React from "react";
 import ReactDOM from "react-dom/client";
-import logo from "./assets/icon.png"
-import userIcon from "./assets/user.png"
+// import logo from "./assets/icon.png";
+// import userIcon from "./assets/user.png";
+import HeaderComponent from "./Components/HeaderComponent/header-component";
+import BodyComponent from "./Components/BodyComponent/body-component";
 
 // const heading = React.createElement(
 //   "div",
@@ -35,16 +37,25 @@ import userIcon from "./assets/user.png"
 // <HeaderComponent1></HeaderComponent1>
 // will render the child component 
 
-const HeaderComponent = () => {
+// const HeaderComponent = () => {
+//   return (
+//     <div>
+//         <img src={logo} id="logo" alt="React"></img> 
+//         <input type="text" id="searchBar" placeholder="Search anything here.."></input>
+//         <img src={userIcon} id="user" alt="user"></img>
+//     </div>
+//   );
+// };
+const AppComponent = () => {
   return (
-    <div className="nav">
-        <img src={logo} id="logo" alt="React"></img> 
-        <input type="text" id="searchBar" placeholder="Search anything here.."></input>
-        <img src={userIcon} id="user" alt="user"></img>
-    </div>
+    <>
+      <HeaderComponent />
+      <BodyComponent />
+    </>
   );
-};
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
 // root.render(<HeadComponent/>);
-root.render(<HeaderComponent/>);
+// root.render(<HeaderComponent/>);
+root.render(<AppComponent />)
