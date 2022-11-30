@@ -4,7 +4,6 @@ import ReactDOM from "react-dom/client";
 // import userIcon from "./assets/user.png";
 import HeaderComponent from "./Components/HeaderComponent/header-component";
 import BodyComponent from "./Components/BodyComponent/body-component";
-
 // const heading = React.createElement(
 //   "div",
 //   { id: "title", className: "title" },
@@ -32,15 +31,15 @@ import BodyComponent from "./Components/BodyComponent/body-component";
 // {HeaderComponent1}
 // It will give Warning: Functions are not valid as a React child. This
 // may happen if you return a Component instead of from render. Or maybe you
-// meant to call this function rather than return it. 
+// meant to call this function rather than return it.
 // <HeaderComponent1 />
 // <HeaderComponent1></HeaderComponent1>
-// will render the child component 
+// will render the child component
 
 // const HeaderComponent = () => {
 //   return (
 //     <div>
-//         <img src={logo} id="logo" alt="React"></img> 
+//         <img src={logo} id="logo" alt="React"></img>
 //         <input type="text" id="searchBar" placeholder="Search anything here.."></input>
 //         <img src={userIcon} id="user" alt="user"></img>
 //     </div>
@@ -50,12 +49,12 @@ const AppComponent = () => {
   return (
     <>
       <HeaderComponent />
-      <BodyComponent />
+      <BodyComponent/>
     </>
   );
-}
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
 // root.render(<HeadComponent/>);
 // root.render(<HeaderComponent/>);
-root.render(<AppComponent />)
+root.render(<AppComponent />);
