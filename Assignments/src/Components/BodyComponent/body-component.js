@@ -1,8 +1,10 @@
+import { useState } from "react";
+
 import CardComponent from "../CardComponent/card-component";
 import "./body-component.css";
 import data from "../../data.json";
 import SearchComponent from "../SearchComponent/search-component";
-import { useState } from "react";
+
 
 const BodyComponent = () => {
   const [filteredData, setFilteredData] = useState(data);
