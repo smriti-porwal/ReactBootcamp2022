@@ -1,11 +1,10 @@
 import { useState } from "react";
 
 import { searchFilter } from "../../Utility/filter";
-import "./search-component.css"
+import "./search-component.css";
 
 const SearchComponent = ({ data, setFilteredData }) => {
   const [searchText, setSearchText] = useState("");
-  console.log("usestate"+useState())
   return (
     <form
       onSubmit={(e) => {
@@ -15,7 +14,8 @@ const SearchComponent = ({ data, setFilteredData }) => {
       }}
     >
       <button id="searchButton">Search</button>
-      <input id="searchBox"
+      <input
+        id="searchBox"
         value={searchText}
         onChange={(e) => {
           setSearchText(e.target.value);
