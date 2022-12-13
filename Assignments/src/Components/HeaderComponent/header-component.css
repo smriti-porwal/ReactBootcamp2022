@@ -1,0 +1,19 @@
+#teamLogo {
+  width: 150px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  border-right: 4px solid black;
+  height: max-content;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: grey;
+}
+
+#headingName {
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 42px;
+}
