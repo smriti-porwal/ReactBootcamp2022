@@ -5,6 +5,7 @@ import "./search-component.css";
 
 const SearchComponent = ({ data, setFilteredData }) => {
   const [searchText, setSearchText] = useState("");
+  
   return (
     <form
       onSubmit={(e) => {

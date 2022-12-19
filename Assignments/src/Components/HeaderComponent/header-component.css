@@ -17,3 +17,15 @@
   margin-top: 40px;
   font-size: 42px;
 }
+
+.nav>span{
+  padding: 17px;
+}
+
+.text-link {
+  color: Black;
+  text-decoration: none;
+}
+.dark-mode{
+  margin-left: 84em;
+}
