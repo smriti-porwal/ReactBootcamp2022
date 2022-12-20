@@ -2,14 +2,14 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HeaderComponent from "./Components/HeaderComponent/header-component";
-// import BodyComponent from "./Components/BodyComponent/body-component";
+import BodyComponent from "./Components/BodyComponent/body-component";
 import AboutUsComponent from "./Components/AboutUsComponent/about-us";
 import ErrorComponent from "./Components/ErrorPageComponent/error-page";
 import TeamMemberComponent from "./Components/TeamMemberComponent/team-member-component";
 import { lazy, Suspense, useState } from "react";
 import UserTheme from "./Context/ThemeContext";
 import ProfileComponent from "./Components/ProfileComponent/profile-component";
-const BodyComponent = lazy(()=>import("./Components/BodyComponent/body-component"))
+const AboutUsComponent = lazy(()=>import("./Components/AboutUsComponent/about-us"))
 
 const AppComponent = () => {
   [theme, setTheme] = useState("Light");
@@ -29,11 +29,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:(
-          <Suspense fallback={<h1>Loading...</h1>}>
-          <BodyComponent />
-          </Suspense>
-        )
+        element: <BodyComponent />
       },
       {
         path: "/member/:id",
@@ -41,7 +37,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about-us",
-        element: <AboutUsComponent />,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <AboutUsComponent />
+          </Suspense>
+        ),
         children: [
           {
             path: "/about-us",
