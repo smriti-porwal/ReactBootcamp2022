@@ -12,7 +12,7 @@ import ProfileComponent from "./Components/ProfileComponent/profile-component";
 const AboutUsComponent = lazy(()=>import("./Components/AboutUsComponent/about-us"))
 
 const AppComponent = () => {
-  [theme, setTheme] = useState("Light");
+  const [theme, setTheme] = useState("Light");
   return (
     <UserTheme.Provider value={{theme:theme, setTheme: setTheme}}>
       <HeaderComponent />
