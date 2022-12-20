@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import HeaderComponent from "./Components/HeaderComponent/header-component";
 import BodyComponent from "./Components/BodyComponent/body-component";
-import AboutUsComponent from "./Components/AboutUsComponent/about-us";
+// import AboutUsComponent from "./Components/AboutUsComponent/about-us";
 import ErrorComponent from "./Components/ErrorPageComponent/error-page";
 import TeamMemberComponent from "./Components/TeamMemberComponent/team-member-component";
 import { lazy, Suspense, useState } from "react";
