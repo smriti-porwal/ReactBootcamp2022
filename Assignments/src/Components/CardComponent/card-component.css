@@ -10,3 +10,9 @@
     box-shadow: 0 10px 50px 0 rgba(71, 63, 63, 0.2);
     border-radius: 45px;
 }
+
+#state-city{
+    position: absolute;
+    top: 185px;
+    right: 156px;
+}

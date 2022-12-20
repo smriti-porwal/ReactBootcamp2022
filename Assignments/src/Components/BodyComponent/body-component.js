@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import CardContainer from "../CardComponent/card-container";
 import "./body-component.css";
 import SearchComponent from "../SearchComponent/search-component";
 import NoDataComponent from "../NoDataComponent/no-data-component";
 import { getTeamsData } from "../../Services/getTeamDataService";
+import UserTheme from "../../Context/ThemeContext";
 
 const BodyComponent = () => {
   const [listOfTeamMember, setListOfTeamMember] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const { theme } = useContext(UserTheme);
   useEffect(() => {
     getTeamsMemberData();
   }, []);
@@ -21,7 +23,7 @@ const BodyComponent = () => {
   }
 
   return (
-    <div className="team-detail-container">
+    <div className="team-detail-container" style={{backgroundColor: theme=== "Light" ? "#fff" : "#8B8181"}}>
       <SearchComponent
         data={listOfTeamMember}
         setFilteredData={setFilteredData}
