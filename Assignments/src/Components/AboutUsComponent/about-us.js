@@ -30,5 +30,8 @@ class AboutUsComponent extends Component {
   componentDidUpdate(){
     console.log("parent - componentdidupdate");
   }
+  componentWillUnmount(){
+    console.log("parent - componentWillUnmount");
+  }
 }
 export default AboutUsComponent;

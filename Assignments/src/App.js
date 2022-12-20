@@ -28,7 +28,7 @@ const appRouter = createBrowserRouter([
     errorElement: <ErrorComponent />,
     children: [
       {
-        path: "/search",
+        path: "/",
         element:(
           <Suspense fallback={<h1>Loading...</h1>}>
           <BodyComponent />

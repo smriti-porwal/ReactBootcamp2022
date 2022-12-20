@@ -20,7 +20,7 @@ const HeaderComponent = () => {
           </Link>
         </span>
         <span>
-          <Link className="text-link" to="/search">
+          <Link className="text-link" to="/">
             Search
           </Link>
         </span>
