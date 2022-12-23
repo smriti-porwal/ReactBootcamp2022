@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import { getTeamMemberData } from "../../Services/getTeamDataService";
+import { getTeamMemberData } from "../Services/getTeamDataService";
 
 // const ProfileComponent = () => {
 //   return (
@@ -23,15 +23,17 @@ class ProfileComponent extends Component {
     }
     render() {
     return (
-      <div>
+      <div className="flex flex-col justify-center items-center m-10">
         {console.log("profile - Render")}
         {/* here "props" is keyword using which we can access the attached props. */}
-        <h1>Name: {this.props.name}</h1>
         {/* using state here */}
-        <img src={this.state?.githubDetail?.avatar_url}></img>
+        <div>
+        <img className="flex justify-center h-72 rounded-full" src={this.state?.githubDetail?.avatar_url}></img>
+        </div>
+       
+        <h1 className="font-bold">{this.props.name}</h1>
         <h1>Email: {this.state?.email}</h1>
         <h1>Phone No.: {this.state?.phone}</h1>
-        <h2>My Github Details</h2>
         <h3>Bio: {this.state?.githubDetail?.bio}</h3>
         <h3>Repo URL: {this.state?.githubDetail?.repos_url}</h3>
         <h3>Company: {this.state?.githubDetail?.company}</h3>

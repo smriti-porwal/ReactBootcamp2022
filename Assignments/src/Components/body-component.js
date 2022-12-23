@@ -1,11 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 
-import CardContainer from "../CardComponent/card-container";
-import "./body-component.css";
-import SearchComponent from "../SearchComponent/search-component";
-import NoDataComponent from "../NoDataComponent/no-data-component";
-import { getTeamsData } from "../../Services/getTeamDataService";
-import UserTheme from "../../Context/ThemeContext";
+import CardContainer from "./CardComponent/card-container";
+import SearchComponent from "./search-component";
+import NoDataComponent from "./no-data-component";
+import { getTeamsData } from "../Services/getTeamDataService";
+import UserTheme from "../Context/ThemeContext";
 
 const BodyComponent = () => {
   const [listOfTeamMember, setListOfTeamMember] = useState([]);
@@ -24,10 +23,12 @@ const BodyComponent = () => {
 
   return (
     <div className="team-detail-container" style={{backgroundColor: theme=== "Light" ? "#fff" : "#8B8181"}}>
+      <div className="flex flex-row-reverse m-2 p-2">
       <SearchComponent
         data={listOfTeamMember}
         setFilteredData={setFilteredData}
       />
+      </div>
       {filteredData && filteredData.length ? (
         <CardContainer listOfTeamMember={filteredData} />
       ) : (
