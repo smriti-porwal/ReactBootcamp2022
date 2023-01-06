@@ -3,9 +3,12 @@ import { teamName } from "../Utility/constant";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import UserTheme from "../Context/ThemeContext";
+import { useSelector } from "react-redux";
 
 const HeaderComponent = () => {
   const { theme, setTheme } = useContext(UserTheme);
+  const userName = useSelector(store=> store.login.value);
+  console.log(userName);
   return (
     <>
       <div className="flex justify-between px-3 py-3 bg-gray-300">
@@ -21,6 +24,9 @@ const HeaderComponent = () => {
           </h1>
         </div>
         <div className="flex space-x-5 items-center">
+            <Link className="text-xl p-2 border-r" to="/login">
+              Login
+            </Link>
             <Link className="text-xl p-2 border-r" to="/about-us">
               About Us 
             </Link>
