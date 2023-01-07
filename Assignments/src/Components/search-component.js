@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import { searchFilter } from "../../Utility/filter";
-import "./search-component.css";
+import { searchFilter } from "../Utility/filter";
 
 const SearchComponent = ({ data, setFilteredData }) => {
   const [searchText, setSearchText] = useState("");
@@ -14,8 +13,9 @@ const SearchComponent = ({ data, setFilteredData }) => {
         setFilteredData(filteredData);
       }}
     >
-      <button id="searchButton">Search</button>
-      <input
+      {/* <span className="border border-solid"> */}
+      <button className="bg-slate-200 border border-solid p-2" id="searchButton">Search</button>
+      <input className="border border-solid p-2"
         id="searchBox"
         value={searchText}
         onChange={(e) => {
@@ -23,6 +23,7 @@ const SearchComponent = ({ data, setFilteredData }) => {
         }}
         placeholder="search anything here..."
       ></input>
+      {/* </span> */}
     </form>
   );
 };
