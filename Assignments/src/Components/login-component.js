@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {login} from "../Components/login-slice";
-import { Redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
     const [email, setEmail] = useState("smriti941144@gmail.com");
     const [name, setName] = useState("Smriti");
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const loginUser = (e) => {
       e.preventDefault();
       dispatch(login(name));
+      navigate("/");
     };
 
   return (
