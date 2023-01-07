@@ -6,7 +6,6 @@ const teamMembersList = [
   "nitishnivedan",
   "gavandivya",
   "akshaymarch7",
-  "ap221882",
   "Bhallora",
   "aditifarkya",
   "it-abhishek2000",

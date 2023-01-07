@@ -33,13 +33,16 @@ const HeaderComponent = () => {
             <Link className="text-xl p-2 border-r" to="/">
               Search
             </Link>
-            <button className="text-xl"
+            <button className="text-xl  border-r"
               onClick={() => {
                 setTheme(theme === "Light" ? "Dark" : "Light");
               }}
             >
               {theme === "Light" ? "Dark" : "Light"} Theme
             </button>
+            <span className="text-xl p-2">
+              USER: {userName}
+            </span>
         </div>
       </div>
     </>

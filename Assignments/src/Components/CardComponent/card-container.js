@@ -41,7 +41,7 @@ const CardContainer = ({ listOfTeamMember }) => {
       </div>
       <div className="flex flex-wrap">
       {listOfTeamMember?.map((teamMemberDetail) => (
-        <Link to={`/member/${teamMemberDetail.login}`}>
+        <Link key={teamMemberDetail.login} to={`/member/${teamMemberDetail.login}`}>
           <CardComponent
             key={teamMemberDetail.login}
             teamMemberDetail={teamMemberDetail}

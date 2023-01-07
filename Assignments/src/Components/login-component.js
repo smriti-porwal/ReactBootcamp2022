@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {login} from "../Components/login-slice";
+import { Redirect } from "react-router-dom";
 
 const LoginComponent = () => {
+    const [email, setEmail] = useState("smriti941144@gmail.com");
+    const [name, setName] = useState("Smriti");
     const dispatch = useDispatch();
     const loginUser = (e) => {
       e.preventDefault();
-      dispatch(login("Pulkit Gupta"));
+      dispatch(login(name));
     };
 
   return (
@@ -23,19 +27,29 @@ const LoginComponent = () => {
                             Email
                         </label>
                         <input
-                            type="email"
+                            type="email" value={email} onChange={e=> e.target.value}
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mb-2">
-                        <label
+                        {/* <label
                             htmlFor="password"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Password
+                        </label> */}
+                        {/* <input
+                            type="password"
+                            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        /> */}
+                        <label
+                            htmlFor="name"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Name
                         </label>
                         <input
-                            type="password"
+                            type="text" value={name} onChange={e=>setName(e.target.value)}
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
