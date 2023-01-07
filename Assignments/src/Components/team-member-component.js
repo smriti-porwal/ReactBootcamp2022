@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import CardComponent from "../CardComponent/card-component";
-import { getTeamMemberData } from "../../Services/getTeamDataService";
+import CardComponent from "./CardComponent/card-component";
+import { getTeamMemberData } from "../Services/getTeamDataService";
 const TeamMemberComponent = () => {
   const { id } = useParams();
 
@@ -19,8 +19,9 @@ const TeamMemberComponent = () => {
 
   return (
     <>
-      <h1>TeamMemberComponent</h1>
+      <div className="flex items-center justify-center">
       <CardComponent teamMemberDetail={memberData} key={memberData.login} />
+      </div>
     </>
   );
 };

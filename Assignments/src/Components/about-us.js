@@ -18,7 +18,7 @@ class AboutUsComponent extends Component {
     return (
       <>
         {console.log("parent- render")}
-        <h1>About us page</h1>
+        {/* <h1>About us page</h1> */}
         <Outlet />
       </>
     );

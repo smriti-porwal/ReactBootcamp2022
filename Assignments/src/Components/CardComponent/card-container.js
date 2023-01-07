@@ -4,7 +4,6 @@ import CardComponent from "./card-component";
 import { Link } from "react-router-dom";
 import stateObj from "../../Utility/city-state.json";
 import { getCities } from "../../Utility/useCity";
-import "./card-component.css";
 
 const CardContainer = ({ listOfTeamMember }) => {
   const [state, setState] = useState("Delhi");
@@ -12,8 +11,8 @@ const CardContainer = ({ listOfTeamMember }) => {
   const cityList = getCities(state);
   return (
     <>
-      <div id="state-city">
-        <select
+      <div id="state-city" className="flex absolute top-28">
+        <select className="border border-solid m-3 p-2"
           value={state}
           onChange={(e) => {
             setState(e.target.value);
@@ -25,7 +24,7 @@ const CardContainer = ({ listOfTeamMember }) => {
             </option>
           ))}
         </select>
-        <select
+        <select className="border border-solid m-3 p-2"
           value={city}
           onChange={(e) => {
             e.target.value;
@@ -40,14 +39,16 @@ const CardContainer = ({ listOfTeamMember }) => {
           })}
         </select>
       </div>
+      <div className="flex flex-wrap">
       {listOfTeamMember?.map((teamMemberDetail) => (
-        <Link to={`/member/${teamMemberDetail.login}`}>
+        <Link key={teamMemberDetail.login} to={`/member/${teamMemberDetail.login}`}>
           <CardComponent
             key={teamMemberDetail.login}
             teamMemberDetail={teamMemberDetail}
           />
         </Link>
       ))}
+      </div>
     </>
   );
 };
